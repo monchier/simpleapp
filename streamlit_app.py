@@ -9,8 +9,4 @@ w2 = st.slider("Label 2", 0.0, 100.0, (25.0, 75.0), 0.5)
 st.write("Value 2:", w2)
 print("Matteo is writing something to standard output")
 import sys
-sys.stderr.write("spam\n")
-st.write("hello")
-import logging
-logging.info("info")
-logging.error("error")
+sys.stderr.write("spam5124\n")
