@@ -11,3 +11,6 @@ print("Matteo is writing something to standard output")
 import sys
 sys.stderr.write("spam\n")
 st.write("hello")
+import logging
+logging.info("info")
+logging.error("error")
