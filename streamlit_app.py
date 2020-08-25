@@ -1,13 +1,18 @@
+
+Emiliano  3:26 PM
 import streamlit as st
-
-st.title("Test App on branch2!!!")
-
-w1 = st.slider("Label 1", 0, 100, 25, 1)
-st.write("Value 1:", w1)
-
-w2 = st.slider("Label 2", 0.0, 100.0, (25.0, 75.0), 0.5)
-st.write("Value 2:", w2)
-print("Matteo is writing something to standard output")
-import sys
-sys.stderr.write("helloamey\n")
-sys.stderr.flush()
+import coloredlogs, logging
+# Create a logger object.
+logger = logging.getLogger(__name__)
+# By default the install() function installs a handler on the root logger,
+# this means that log messages from your code and log messages from the
+# libraries that you use will all show up on the terminal.
+coloredlogs.install(level='DEBUG')
+# If you don't want to see log messages from libraries, you can pass a
+# specific logger object to the install() function. In this case only log
+# messages originating from that logger will show up on the terminal.
+coloredlogs.install(level='DEBUG', logger=logger)
+st.title("Test App!!!")
+log_text = st.text_input('Log text:')
+if st.button("send log"):
+    logging.info(log_text)
