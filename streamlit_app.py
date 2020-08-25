@@ -1,5 +1,3 @@
-
-Emiliano  3:26 PM
 import streamlit as st
 import coloredlogs, logging
 # Create a logger object.
