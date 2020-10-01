@@ -10,7 +10,7 @@ coloredlogs.install(level='DEBUG')
 # specific logger object to the install() function. In this case only log
 # messages originating from that logger will show up on the terminal.
 coloredlogs.install(level='DEBUG', logger=logger)
-st.title("Test App!!!")
+st.title("Test App 232323!!!")
 log_text = st.text_input('Log text:')
 if st.button("send log"):
     logging.info(log_text)
